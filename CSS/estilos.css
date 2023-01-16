@@ -39,10 +39,13 @@ body {
   top: -150px;
   left: 200px;
   width:70%;
-  
-  color: rgb(24, 4, 136);
+  color: aqua;
   text-align: justify;
     
+}
+
+h1{
+  text-decoration: underline;
 }
 
 .box1{
@@ -61,17 +64,6 @@ body {
   overflow: hidden;
 }
 
-.box1 .inner::first-child {
-  transform-origin: center;
-  transform: perspective(100px) rotateY(-15deg);
-}
-
-.box1 .inner::last-child {
-  background-color: rgb(225, 235, 170);
-  color: rgb(102, 210, 30);
-  transform-origin: left;
-  transform: perspective(100px) rotateY(15deg);
-}
 
 .box1 .inner span{
   position: relative;
@@ -91,6 +83,8 @@ body {
     left: -100%;
   }
 }
+
+
 
 
 ul {
@@ -117,7 +111,7 @@ ul {
   padding: 16px;
   color: rgb(41, 38, 243);
   text-align: center;
-  padding: 14px16px;
+  padding: 14px 16px;
   text-decoration: none;
   
   }
@@ -128,8 +122,8 @@ ul {
   }
 
 p {
-    color: rgb(13, 3, 107);
-    font-size: large;
+  color: aqua;
+  font-size: large;
 }
 
 .Titulo{
@@ -146,6 +140,16 @@ p {
     object-fit: cover;
     object-position: bottom;
 }
+
+@media(max-width: 480px){
+  .banner{
+    height: 25em;
+    justify-content: center;
+    margin-left: 50px;
+  }
+  
+}
+
 
 .Habilidades{
   
@@ -256,6 +260,7 @@ p {
     width: 150px;
     position: relative;
     top: -75px;
+    margin-left: 15px;
      border-radius: 75%;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 16px 11px 4px rgba(0,0,0,0.51); 
     box-shadow: 0px 10px 13px -7px #000000, 0px 16px 11px 4px rgba(0,0,0,0.51);

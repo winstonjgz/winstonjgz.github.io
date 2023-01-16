@@ -1,5 +1,3 @@
-/* Codigo habilitado Fuente: Codepen.io "Responsive Circular Progress Bar | coders kamrul" readaptado por Winston J Guzman*/
-
 let options = {
     startAngle: -1.55,
     size: 150,
@@ -33,3 +31,5 @@ let options = {
   });$(".ResolucionC .bar").circleProgress({
     value: 0.90
   });
+
+  /* Codigo habilitado Fuente: Codepen.io "Responsive Circular Progress Bar | coders kamrul" readaptado por Winston J Guzman*/

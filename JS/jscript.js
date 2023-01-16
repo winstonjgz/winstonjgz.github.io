@@ -28,8 +28,28 @@ let options = {
   });
   $(".Empatia .bar").circleProgress({
     value: 0.90
-  });$(".ResolucionC .bar").circleProgress({
+  });
+  $(".TrabEquipo .bar").circleProgress({
+    value: 0.99
+  });
+  $(".CapAnyRes .bar").circleProgress({
+    value: 0.99
+  });
+  $(".VBA .bar").circleProgress({
+    value: 0.75
+  });
+  $(".bootstrap .bar").circleProgress({
+    value: 0.70
+  });
+  $(".Java .bar").circleProgress({
+    value: 0.75
+  });
+  $(".Python .bar").circleProgress({
+    value: 0.70
+  });
+  $(".ResolucionC .bar").circleProgress({
     value: 0.90
   });
 
   /* Codigo habilitado Fuente: Codepen.io "Responsive Circular Progress Bar | coders kamrul" readaptado por Winston J Guzman*/
+

@@ -92,7 +92,7 @@ h4{
 
 .password-length-box{
     height: 45px;
-    width: 80%;
+    width: 90%;
     position: absolute;
     top: 175px;
 }
@@ -103,7 +103,7 @@ h4{
     width: 100%;
     background: white;
     border-radius: 30px;
-}
+}    
 
 .password-length-box input::-webkit-slider-thumb{
     -webkit-appearance: none;
@@ -154,7 +154,7 @@ h4{
   
 }
 
-.settings .lowercase span,.settings .numbers span{
+.settings .lowercase span, .settings .numbers span{
     position: relative;
     left: 2px;
 }
@@ -259,7 +259,12 @@ footer {
     background-color: aquamarine;
     display: flex;
     justify-content: center;
+    border-radius: 15px;
+    
+}
 
-
-
+#volver1 a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: medium;
 }

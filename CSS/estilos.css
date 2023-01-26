@@ -151,7 +151,7 @@ p {
 }
 
 
-.Habilidades{
+.Habilidades .Proyectos{
   
   margin-top: 50px;
   border: 0px;
@@ -159,7 +159,7 @@ p {
   box-sizing: border-box;
 }
 
-#HabilidadesDuras, #HabilidadesBlandas{
+#HabilidadesDuras, #HabilidadesBlandas, #Proyectos{
   margin: 25px;
 } 
 
@@ -281,5 +281,25 @@ p {
     background-color: rgb(46, 177, 238);
   }
 
+
+.Proyectos a {
+  
+  display:inline-block;
+  padding: 16px;
+  color: rgb(41, 38, 243);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+  }
+
+  #GenPaswd{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: aqua;
+  }
   
   

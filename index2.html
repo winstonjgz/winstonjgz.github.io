@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de contraseñas / Password Generator </title>
+    
+    <script src="https://kit.fontawesome.com/302a7325c5.js" crossorigin="anonymous"></script>
+
+    <meta name="description" content="En esta pagina se dejan asentadas las habilidades blandas y duras de mi persona, asi como distintos matices profesionales, de Winston J. Guzman. 16/01/2023, VABA, Argentina" />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Generador de contraseñas" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content=" https://winstonjgz.github.io/" />
+    <meta property="og:image" content=" https://winstonjgz.github.io/" />
+    <meta property="og:description" content="Generador de contraseñas en pagina de Winston Guzman" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/style.css" type="text/css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+
+
+</head>
+<body>
+    <section>
+
+        <div class="container">
+            <div class="app-name">
+                <h4> Password Generator </h4>
+            </div>
+            <div class="password-box">
+                <input type="text" name="password" id="password" class="pas-value" value="53$?kqw9c" readonly>
+                
+                <i class="fa-solid fa-pen" id="copy-btn"></i>
+                
+            </div>
+            <div class="indicator-box">
+                <div></div>
+        
+                <div class="indicator">
+        
+                </div>
+            </div>
+            <p class="pass-setting-title"> Password Setting </p>
+            <div class="password-length-box">
+                <span>
+                    Password Length
+                </span>
+                <span class="pass-length-value">
+                    8
+        
+                </span>
+                <input type="range" class="pass-slider" name="pass-slider" id="pass-slider" min="6" max="32" value="8">
+        
+            </div>
+            <div class="settings">
+                <div class="lowercase">
+                    <input type="checkbox" name="lowercase" id="lowercase" checked>
+                    <span> Lowercase(a-z)</span>
+                </div>
+                <div class="uppercase">
+                    <input type="checkbox" name="uppercase" id="uppercase" checked>
+                    <span> Uppercase(A-Z)</span>
+                </div>
+                <div class="numbers">
+                    <input type="checkbox" name="numbers" id="numbers" checked>
+                    <span> Numbers(0-9)</span>
+                </div>
+                <div class="symbols">
+                    <input type="checkbox" name="symbols" id="symbols" checked>
+                    <span> Symbols(!-+*%$&#@.,)</span>
+                </div>
+                <button class="generate-btn"> Generate Password </button>
+        
+            </div>
+            
+        </div>
+
+    </section>   
+
+    <div class="container-flex">
+        <h2 >
+            <button type="submit" id="volver1">
+                <a href="/index.html"> Volver </a>
+            </button>
+            
+        </h2>
+    </div>    
+
+<footer id="Contacto">
+    <h3>
+        <a href="mailto:winstonjgz@yahoo.com" target="_blank" class="btn btn-info contact-details" >email
+            <i class="fa-solid fa-envelopes-bulk"></i>
+          </a>
+          <span> Winston Guzman | 2023, Buenos Aires, Argentina.  </span>
+    </h3>
+
+</footer>
+
+<script src="/JS/Scripts.js"></script>
+</body>
+</html>

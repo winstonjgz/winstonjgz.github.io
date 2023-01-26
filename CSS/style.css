@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #0727A7;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+h4{
+    text-align: center;
+}
+
+.container{
+    height: 450px;
+    width: 450px;
+    background: darkblue;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    transform: translate(-50, -50%);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.container .app-name{
+    height: 55px;
+    width: 100%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: aquamarine;
+    padding: 20px;
+    font-size: 17px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.container .password-box{
+    height: 50px;
+    width: 100%;
+    position: relative;
+    top: 70px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+
+}
+
+.container .password-box input{
+    all: unset;
+    height: 50px;
+    width: 85%;
+    border-radius: 5px;
+    padding-left: 15px;
+    color: white;
+}
+
+.container .password-box #copy-btn{
+    color: white;
+}
+
+.container .indicator-box{
+    height: 6px;
+    width: 100%;
+    position: relative;
+    top: 80px;
+    z-index: 1;
+}
+
+.container .indicator-box div:nth-child(1){
+    height: 3px;
+    width: 100%;
+    background: gray;
+    border-radius: 30px;
+    position: absolute;
+}
+
+.container .indicator-box .indicator{
+    height: 3px;
+    width: 35%;
+    background: red;
+    position: absolute;
+    top: 0;
+    border-radius: 30px;
+    transition: all .2s;
+}
+
+.password-length-box{
+    height: 45px;
+    width: 80%;
+    position: absolute;
+    top: 175px;
+}
+
+.password-length-box input{
+    all:unset;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 30px;
+}
+
+.password-length-box input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background: #0727A7;
+    border: 5px solid #0727A7;
+    box-shadow: rgba(0, 0, 0, 0.19) 8px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.password-length-box span{
+    font-weight: 680;
+    color: white;
+    font-size: 14px;
+}
+
+.password-length-box .password-length-value{
+    float: right;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.settings{
+    height: 110px;
+    width: 100%;
+    position: relative;
+    top: 170px;
+}
+
+.settings div{
+    height: 55px;
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+.settings .lowercase #lowercase .settings .numbers #numbers{
+    position: relative;
+    left: -15px;
+  
+}
+
+.settings .lowercase span,.settings .numbers span{
+    position: relative;
+    left: 2px;
+}
+
+.settings .uppercase #uppercase, .settings .symbols #symbols{
+    position: relative;
+    left: 5px;
+    
+}
+
+.settings .uppercase span,.settings .symbols span{
+    position: relative;
+    left: 10px;
+}
+
+.settings .lowercase #lowercase{
+    pointer-events: none;
+}
+
+.container .generate-btn{
+    all: unset;
+    height: 45px;
+    width: 100%;
+    background: rgb(6, 48, 233);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-weight: 600;
+    position: relative;
+    top: 7px;
+    cursor: pointer;
+}
+
+.pass-setting-title{
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    top: 160px;
+    color: rgb(215, 215, 241);
+}
+
+.container .indicator-box .indicator#weak{
+    background: red;
+    width: 35%;
+
+}
+
+.container .indicator-box .indicator#medium{
+    background: rgb(236, 240, 13);
+    width: 70%;
+}
+
+.container .indicator-box .indicator#strong{
+    background: green;
+    width: 100%;
+}
+
+footer {
+    
+    font-weight: 300;
+    size: 50px;
+    max-height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    padding: 15px;
+    background-color: rgb(46, 177, 238);
+    margin-top: 600px;
+  }
+
+
+
+@media(max-width: 1200px){
+    
+    .container{
+        top: 10%;
+        left: 30%;
+    }
+    
+}
+
+
+@media(max-width: 700px){
+    
+    .container{
+        top: 10%;
+        left: 12.5%;
+    }
+
+    
+}
+
+#volver1{
+    padding: 20px;
+    margin: 20px;
+    width: 100px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+
+
+
+}

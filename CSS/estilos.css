@@ -185,8 +185,10 @@ p {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    box-shadow: 1px 10px 15px rgba(0,0,0,0.1);
+    box-shadow: 8px 9px 16px 9px rgba(23,177,189,0.82);
   }
+
+  
   .wrapper .card .circle{
     position: relative;
     height: 150px;
@@ -297,10 +299,19 @@ p {
     position: relative;
     display: flex;
     justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
     padding: 10px;
     margin: 10px;
     background-color: aqua;
   }
+
+  #GenPaswd:hover{
+    background-color: rgb(33, 18, 243);
+    color: aqua;
+  }
+
+
 
   #ProyectosVarios{
     display: flex;
@@ -322,7 +333,7 @@ p {
 
   #ProyectosVarios img:hover{
     cursor: crosshair;
-    width: 30%;
+    width: 75%;
     opacity: 1;
     filter: contrast(120%);
   }

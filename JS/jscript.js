@@ -9,16 +9,16 @@ let options = {
     $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
   });
   $(".js .bar").circleProgress({
-    value: 0.80
+    value: 0.85
   });
   $(".node .bar").circleProgress({
-    value: 0.65
+    value: 0.70
   });      
   $(".react .bar").circleProgress({
-    value: 0.50
+    value: 0.70
   });
   $(".ingles .bar").circleProgress({
-    value: 0.70
+    value: 0.80
   });
   $(".Liderazgo .bar").circleProgress({
     value: 0.95
@@ -36,7 +36,7 @@ let options = {
     value: 0.99
   });
   $(".VBA .bar").circleProgress({
-    value: 0.75
+    value: 0.80
   });
   $(".bootstrap .bar").circleProgress({
     value: 0.70
@@ -45,7 +45,13 @@ let options = {
     value: 0.75
   });
   $(".Python .bar").circleProgress({
-    value: 0.70
+    value: 0.75
+  });
+  $(".Angular .bar").circleProgress({
+    value: 0.75
+  });
+  $(".MySQL .bar").circleProgress({
+    value: 0.8
   });
   $(".ResolucionC .bar").circleProgress({
     value: 0.90

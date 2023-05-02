@@ -3,117 +3,42 @@
   margin: 0;
 }
 
-#logo{
-  height: 60px;
-  width: auto;
-  border-radius:75%;
-  
-}
-
-header{
-  position: fixed;
-  margin-top: 0;
-  margin-bottom: 40px;  
-  z-index: 100;
-  height: 80px;
-  width: 100%;
-}
-
-
-.container-flex .hab{
-  margin-top: -150px;
-}
-
-
-.container-flex nav{
-  margin-top: 0;
-  width: 100%;
-  
-}
-
-.menu{
-  height: 80px;
-}
-
-nav{
-  margin-top: 0;
-  display: contents;
-  flex-wrap: wrap;
-  align-items: left;
-  padding: 1rem 1.5rem;
-  border-radius: 0.4rem;
-  width: 100%;
-  overflow:auto;
-  margin-bottom: 10px; 
+.navbar{
+  background-color: rgb(30, 115, 190);
  
-
 }
 
-nav ul{
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin-top: 0;
+
+.active{
+  color: #F2F2F2;
+  font-weight: bold;
+}
+.nav-link{
+  color: #F2F2F2;
 }
 
-nav a{
-  text-decoration: none;
-
-}
-
-nav #toggle, nav label{
-  display: none;
-}
-
-@media (max-width: 1000px){
-  nav .menu{
-    width: 100%;
-    height: 0px;
-    overflow: hidden;
-  }
-
-  nav ul{
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 0;
-  }
-
-  nav label{
-    display: inline-flex;
-    cursor: pointer;
-    size: 30px;
-    color: aqua;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
-    padding: 10px;
-    
-  }
-
-  nav #toggle:checked ~ .menu{
-    height: 600px;
-    
-  }
-
-
-}
 
 body {
-    background-color:rgb(0, 119, 255);
+    background-color: #F2F2F2   ;
     /*con box sizing se asegura sea responsiva la pagina */
     box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
     
 }
 
-.AcercaDe{
+.AcercaDe {
   position:relative;
-  top: -150px;
+  top: -120px;
   left: 200px;
   width:70%;
-  color: aqua;
+  color: rgb(30, 115, 190);
   text-align: justify;
     
+}
+
+.mebadge{
+  background-color: rgb(30, 115, 190);
+  text-align: justify;
 }
 
 h1{
@@ -121,8 +46,9 @@ h1{
 }
 
 .box1{
-  display: -webkit-inline-box;
+  margin-top: 1%;
   margin-left: 12.5rem;
+  padding-bottom: 35px;
   align-items: center;
   justify-content: center;
  }
@@ -158,80 +84,35 @@ h1{
   }
 }
 
-
-
-
-ul {
-  list-style-type: none;
-  margin: auto;
-  padding: 1px;
-  overflow: hidden;
-  margin-bottom: auto;
-  background-color: rgb(46, 235, 235);
+@media(max-width: 753px){
+  .box1 {
+    margin-left: 1rem;
+    width: 100%;
+    text-justify: auto;
+  }
   
+  .AcercaDe{
+    position:inherit;
+    top: -120px;
+    padding: 20px;
+    width:100%;
+    text-align: left;
+    font-size: smaller;
+  }
+
 }
-  
-  li {
-  float: left;
-  align-items: center;
-  margin: 5px;
-  padding-top: 7px;
-  
-  }
-  
-  li a {
-  
-  display:inline-block;
-  color: rgb(41, 38, 243);
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-  
-  }
-  
-  li a:hover {
-  background-color: #166ef1;
-  margin-bottom: auto;
-  }
+
 
 p {
-  color: aqua;
+  color: rgb(30, 115, 190);
   font-size: large;
 }
 
 .Titulo{
     size: 20px;
-    color: aqua;
+    color: rgb(30, 115, 190);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
-.banner{
-    position: relative;
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    object-position: bottom;
-}
-
-@media(max-width: 1000px){
-  .banner{
-    height: 25em;
-    justify-content: center;
-    margin-left: 50px;
-  }
-  .box1 .inner{
-    font-size: 17px;
-    height: 8em;
-    display: initial;
-    margin-left: 0.2rem;
-    padding: 2px;
-    margin: 0;
-
-  }
-  
 }
 
 
@@ -243,8 +124,9 @@ p {
   box-sizing: border-box;
 }
 
-#HabilidadesDuras, #HabilidadesBlandas, #Proyectos{
+#HabilidadesDuras, #HabilidadesBlandas, #Proyectos, #meBadgeI{
   margin: 25px;
+  color: rgb(30, 115, 190);
 } 
 
 
@@ -257,10 +139,11 @@ p {
     justify-content: space-between;
     margin-top: 15px;
     margin-inline: auto;
+    box-sizing: border-box;
   }
   .wrapper .card{
     background: #fff;
-       width: calc(25% - 5px);
+    width: calc(25% - 5px);
     height: 300px;
     margin-top: 10px;
     margin-right: 15px;
@@ -280,6 +163,7 @@ p {
     border-radius: 50%;
     cursor: default;
   }
+
   .card .circle .box,
   .card .circle .box span{
     position: absolute;
@@ -304,6 +188,8 @@ p {
   }
   .circle .box span{
     font-size: 38px;
+    border-radius: 50%;
+    padding: 10px;
     font-family: sans-serif;
     font-weight: 600;
     transform: translate(-45%, -45%);
@@ -315,25 +201,30 @@ p {
   .card .text{
     font-size: 20px;
     font-weight: 600;
+    border-radius: 40%;
+    padding: 10px;
+    text-align: center;
+    
   }
   @media(max-width: 753px){
     .wrapper{
-      max-width: 700px;
+      max-width: 90%;
     }
     .wrapper .card{
       width: calc(40% - 20px);
       margin-top: 15px;
       margin-bottom: 20px;
-      margin-left: 15px;
+      margin-left: 5px;
     }
   }
+  
   @media(max-width: 500px){
     .wrapper{
-      max-width: 480px;
+      max-width: 90%;
     }
     .wrapper .card{
       width: 75%;
-      margin-left: 50px;
+      margin-left: 5px;
     }
     .AcercaDe{
       width: 15em;
@@ -351,6 +242,7 @@ p {
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 16px 11px 4px rgba(0,0,0,0.51); 
     box-shadow: 0px 10px 13px -7px #000000, 0px 16px 11px 4px rgba(0,0,0,0.51);
     z-index: 1;
+    box-sizing: border-box;
   }
 
 
@@ -372,7 +264,7 @@ p {
   
   display:inline-block;
   padding: 16px;
-  color: rgb(41, 38, 243);
+  color: #F2F2F2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -387,55 +279,96 @@ p {
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-    background-color: aqua;
+    background-color: rgb(30, 115, 190);;
   }
 
   #GenPaswd:hover{
     background-color: rgb(33, 18, 243);
-    color: aqua;
+    color: #374342;
   }
 
 
 
-  #ProyectosVarios{
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    height: 500px;
-    margin-left: 10%;
-    
+#ProyectosVarios{
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 300px;
+  margin-left: 10%;
+  margin-bottom: 100px;
+  
+
+}
+
  
-  }
+#ProyectosVarios img{
+  width: 300px;
+  height: 280px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+}
 
-  #ProyectosVarios img{
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
-  }
+#ProyectosVarios figure:hover > img{
+  cursor: crosshair;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  filter: contrast(120%);
+}
 
-  #ProyectosVarios img:hover{
-    cursor: crosshair;
+  
+@media (max-width:800px) {
+  #ProyectosVarios ~ .Proyectos{
+    padding-left: 25px;
+    height: 40%;
     width: 75%;
-    opacity: 1;
-    filter: contrast(120%);
-  }
-  
-  @media (max-width:800px) {
-    #ProyectosVarios{
-      padding-left: 25px;
-      height: 40%;
-      width: 100%;
-    
-    }
-
-    footer{
-      width: 100%;
-      justify-items: center;
-    }
-
-    
+    margin-left: 15px;
     
   }
+
+  footer{
+    width: 100%;
+    justify-items: left;
+    margin-left: 10px;
+    font-size: 5px;
+  }
+}
   
+figure {
+  border: thin #c0c0c0 solid;
+  padding: 5px;
+  max-width: 120%;
+  margin: auto;
+}
+
+
+figcaption {
+  background-color: rgb(30, 115, 190);
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+
+@media (max-width: 500px){
+  .AcercaDe {
+    width: 22em;
+  }
+
+  .fotoPerfil{
+    position: relative;
+    top:75px;
+      
+  }
+
+  .box1 .inner{
+    margin-left: 0;
+    width: 100%;
+    
+  }
+
+ 
+
+}

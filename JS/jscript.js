@@ -50,6 +50,9 @@ let options = {
   $(".Angular .bar").circleProgress({
     value: 0.75
   });
+  $(".GoogleSheets_Scripts .bar").circleProgress({
+    value: 0.85
+  });
   $(".MySQL .bar").circleProgress({
     value: 0.8
   });

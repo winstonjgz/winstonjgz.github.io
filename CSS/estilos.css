@@ -323,7 +323,7 @@ p {
   #ProyectosVarios ~ .Proyectos{
     padding-left: 25px;
     height: 40%;
-    width: 75%;
+    width: auto;
     margin-left: 15px;
     
   }
@@ -369,6 +369,5 @@ figcaption {
     
   }
 
- 
 
 }

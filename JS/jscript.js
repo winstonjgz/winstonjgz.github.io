@@ -1,7 +1,7 @@
 let options = {
     startAngle: -1.55,
     size: 150,
-    value: 0.85,
+    value: 0.90,
     fill: {gradient: ['#07E6ED', '#07E6ED']}
   }
   $(".circle .bar").circleProgress(options).on('circle-animation-progress',
@@ -9,16 +9,16 @@ let options = {
     $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
   });
   $(".js .bar").circleProgress({
-    value: 0.85
+    value: 0.90
   });
   $(".node .bar").circleProgress({
-    value: 0.70
+    value: 0.80
   });      
   $(".react .bar").circleProgress({
     value: 0.70
   });
   $(".ingles .bar").circleProgress({
-    value: 0.80
+    value: 0.90
   });
   $(".Liderazgo .bar").circleProgress({
     value: 0.95
@@ -36,25 +36,25 @@ let options = {
     value: 0.99
   });
   $(".VBA .bar").circleProgress({
-    value: 0.80
+    value: 0.90
   });
   $(".bootstrap .bar").circleProgress({
-    value: 0.70
+    value: 0.85
   });
   $(".Java .bar").circleProgress({
-    value: 0.75
+    value: 0.85
   });
   $(".Python .bar").circleProgress({
-    value: 0.75
+    value: 0.90
   });
   $(".Angular .bar").circleProgress({
-    value: 0.75
+    value: 0.85
   });
   $(".GoogleSheets_Scripts .bar").circleProgress({
     value: 0.85
   });
   $(".MySQL .bar").circleProgress({
-    value: 0.8
+    value: 0.90
   });
   $(".ResolucionC .bar").circleProgress({
     value: 0.90

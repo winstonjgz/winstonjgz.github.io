@@ -25,7 +25,7 @@ window.addEventListener('load', ()=>{
         //console.log(LatLon2)
         //const url = 'http://api.weatherapi.com/v1/current.json?key=APPI_KEY&q={LatLon}'
         const url = 'https://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&lang=es&APPID='+ mykey;
-        console.log(url)
+        //console.log(url)
         
 
          fetch(url)

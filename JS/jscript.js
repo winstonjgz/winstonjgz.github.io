@@ -11,8 +11,8 @@ let options = {
   $(".js .bar").circleProgress({
     value: 0.90
   });
-  $(".node .bar").circleProgress({
-    value: 0.80
+  $(".php .bar").circleProgress({
+    value: 0.90
   });      
   $(".react .bar").circleProgress({
     value: 0.70

@@ -1,373 +1,408 @@
+/* Variables CSS para colores y tipografía */
+:root {
+    --primary-color: #2196F3; /* Azul vibrante */
+    --secondary-color: #0d47a1; /* Azul oscuro */
+    --text-dark: #333;
+    --text-light: #f8f9fa;
+    --bg-light: #f8f9fa;
+    --bg-dark: #343a40;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Asegura el box model consistente */
 }
-
-.navbar{
-  background-color: rgb(30, 115, 190);
- 
-}
-
-
-.active{
-  color: #F2F2F2;
-  font-weight: bold;
-}
-.nav-link{
-  color: #F2F2F2;
-}
-
 
 body {
-    background-color: #F2F2F2   ;
-    /*con box sizing se asegura sea responsiva la pagina */
-    box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;
-    
+    font-family: 'Roboto', sans-serif; /* Fuente profesional */
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
-.AcercaDe {
-  position:relative;
-  top: -120px;
-  left: 200px;
-  width:70%;
-  color: rgb(30, 115, 190);
-  text-align: justify;
-    
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px var(--shadow-color);
 }
 
-.mebadge{
-  background-color: rgb(30, 115, 190);
-  text-align: justify;
+.navbar-brand img {
+    border: 2px solid var(--primary-color);
+    transition: transform 0.3s ease;
 }
 
-h1{
-  text-decoration: underline;
+.navbar-brand img:hover {
+    transform: scale(1.05);
 }
 
-.box1{
-  margin-top: 1%;
-  margin-left: 12.5rem;
-  padding-bottom: 35px;
-  align-items: center;
-  justify-content: center;
- }
-
-.box1 .inner{
-  width: 80%;
-  padding-top: 15px;
-  height: 6em;
-  line-height: 10em;
-  font-size: 25px;
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
+.navbar-brand span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
-
-.box1 .inner span{
-  position: relative;
-  animation: marquee 3s linear 5s;
+.nav-link {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.box1 .inner:first-child span{
-  animation-delay: 2.5s;
-  left: 0;
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
 }
 
-@keyframes marquee {
-  from {
-    left: 100%;
-  }
-  to {
-    left: -100%;
-  }
+.dropdown-menu {
+    background-color: var(--secondary-color);
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media(max-width: 753px){
-  .box1 {
-    margin-left: 1rem;
+.dropdown-item {
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    padding-top: 5rem; /* Ajuste para la navbar fija */
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Para que la imagen de perfil no se desborde al subir */
+}
+
+.translate-middle {
+    transform: translate(-50%,-100%)!important;
+}
+
+.hero-banner {
+    filter: brightness(0.6); /* Oscurece la imagen para que el texto resalte */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-justify: auto;
-  }
-  
-  .AcercaDe{
-    position:inherit;
-    top: -120px;
-    padding: 20px;
-    width:100%;
-    text-align: left;
-    font-size: smaller;
-  }
-
+    height: 100%;
+    z-index: -1;
 }
 
-
-p {
-  color: rgb(30, 115, 190);
-  font-size: large;
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border: 5px solid var(--bg-light);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    object-fit: cover;
 }
 
-.Titulo{
-    size: 20px;
-    color: rgb(30, 115, 190);
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+.hero-content {
+    z-index: 2;
+    color: var(--text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-
-.Habilidades .Proyectos{
-  
-  margin-top: 50px;
-  border: 0px;
-  padding: 0%;
-  box-sizing: border-box;
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 300px;
 }
 
-#HabilidadesDuras, #HabilidadesBlandas, #Proyectos, #meBadgeI{
-  margin: 25px;
-  color: rgb(30, 115, 190);
-} 
+/* --- Secciones Generales --- */
+section {
+    padding: 4rem 0;
+    /* margin-bottom: 2rem; */
+}
 
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
 
-/* Codigo habilitado Fuente: Codepen.io "Responsive Circular Progress Bar | coders kamrul" readaptado por Winston J Guzman*/
-.wrapper{
-    width: 1000px;
+/* --- Acerca de mí --- */
+#acerca-de p {
+    color: var(--text-dark);
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+}
+
+#acerca-de .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+#acerca-de .btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* --- Habilidades (Circle Progress) --- */
+.skill-cards-wrapper {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 15px;
-    margin-inline: auto;
-    box-sizing: border-box;
-  }
-  .wrapper .card{
+    justify-content: center;
+    gap: 1.5rem; /* Espacio entre las tarjetas */
+}
+
+.skill-card {
     background: #fff;
-    width: calc(25% - 5px);
-    height: 300px;
-    margin-top: 10px;
-    margin-right: 15px;
     border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     flex-direction: column;
-    box-shadow: 8px 9px 16px 9px rgba(23,177,189,0.82);
-  }
+    align-items: center;
+    justify-content: center;
+    height: 250px; /* Altura fija para uniformidad */
+}
 
-  
-  .wrapper .card .circle{
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card .circle {
     position: relative;
-    height: 150px;
-    width: 150px;
+    height: 120px; /* Tamaño más pequeño para las tarjetas */
+    width: 120px;
     border-radius: 50%;
-    cursor: default;
-  }
+    margin-bottom: 1rem;
+}
 
-  .card .circle .box,
-  .card .circle .box span{
+.skill-card .circle .box,
+.skill-card .circle .box span {
     position: absolute;
     top: 50%;
     left: 50%;
-  }
-  .card .circle .box{
+    transform: translate(-50%, -50%);
+}
+
+.skill-card .circle .box {
     height: 100%;
     width: 100%;
     background: #fff;
-    border-radius: 70%;
-    transform: translate(-50%, -50%) scale(0.8);
-    transition: all 0.2s;
-  }
-  .card .circle:hover .box{
-    transform: translate(-50%, -50%) scale(0.91);
-  }
-  .card .circle .box span,
-  .wrapper .card .text{
-    background: -webkit-linear-gradient(left, #c4cbee, #6feb94);
-    -webkit-text-fill-color:rgb(24, 71, 158);
-  }
-  .circle .box span{
-    font-size: 38px;
     border-radius: 50%;
-    padding: 10px;
-    font-family: sans-serif;
+    transition: transform 0.2s ease;
+}
+
+.skill-card .circle:hover .box {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.skill-card .circle .box span {
+    font-size: 2.2rem;
     font-weight: 600;
-    transform: translate(-45%, -45%);
-    transition: all 0.1s;
-  }
-  .card .circle:hover .box span{
-    transform: translate(-45%, -45%) scale(1.09);
-  }
-  .card .text{
-    font-size: 20px;
+    color: var(--primary-color); /* Color del texto del porcentaje */
+}
+
+.skill-card .text {
+    font-size: 1.1rem;
     font-weight: 600;
-    border-radius: 40%;
-    padding: 10px;
+    color: var(--secondary-color);
     text-align: center;
-    
-  }
-  @media(max-width: 753px){
-    .wrapper{
-      max-width: 90%;
+}
+
+/* --- Proyectos --- */
+.project-card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card .card-body {
+    padding: 1.5rem;
+}
+
+.project-card .card-title {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.project-card .card-text {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.project-card .btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.project-card .btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* --- Insignias --- */
+#insignias .meBadge {
+    margin: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 2.5rem 0;
+}
+
+footer h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+footer .btn-outline-light {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer .btn-outline-light:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.social-links a {
+    color: var(--text-light);
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* --- Media Queries (Responsiveness) --- */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
     }
-    .wrapper .card{
-      width: calc(40% - 20px);
-      margin-top: 15px;
-      margin-bottom: 20px;
-      margin-left: 5px;
+    .navbar-nav .nav-item {
+        margin: 0.5rem 0;
     }
-  }
-  
-  @media(max-width: 500px){
-    .wrapper{
-      max-width: 90%;
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
-    .wrapper .card{
-      width: 75%;
-      margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 400px;
     }
-    .AcercaDe{
-      width: 15em;
+    .profile-pic {
+        width: 150px;
+        height: 150px;
     }
-
-    
-  }
-
-  .fotoPerfil{
-    width: 150px;
-    position: relative;
-    top: -75px;
-    margin-left: 15px;
-    border-radius: 75%;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 16px 11px 4px rgba(0,0,0,0.51); 
-    box-shadow: 0px 10px 13px -7px #000000, 0px 16px 11px 4px rgba(0,0,0,0.51);
-    z-index: 1;
-    box-sizing: border-box;
-  }
-
-
-  footer {
-    font-weight: 300;
-    size: 50px;
-    max-height: 75px;
-    display: flex;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    margin: 60px;
-    padding: 15px;
-    background-color: rgb(46, 177, 238);
-  }
-
-
-.Proyectos a {
-  
-  display:inline-block;
-  padding: 16px;
-  color: #F2F2F2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  
-  }
-
-  #GenPaswd{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    background-color: rgb(30, 115, 190);;
-  }
-
-  #GenPaswd:hover{
-    background-color: rgb(33, 18, 243);
-    color: #374342;
-  }
-
-
-
-#ProyectosVarios{
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  height: 300px;
-  margin-left: 10%;
-  margin-bottom: 100px;
-  
-
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    .skill-card {
+        height: 220px;
+    }
+    .skill-card .circle {
+        width: 100px;
+        height: 100px;
+    }
+    .skill-card .circle .box span {
+        font-size: 1.8rem;
+    }
+    .project-card img {
+        height: 180px;
+    }
 }
 
- 
-#ProyectosVarios img{
-  width: 300px;
-  height: 280px;
-  flex-grow: 1;
-  object-fit: cover;
-  opacity: .8;
-  transition: .5s ease;
-}
-
-#ProyectosVarios figure:hover > img{
-  cursor: crosshair;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  filter: contrast(120%);
-}
-
-  
-@media (max-width:800px) {
-  #ProyectosVarios ~ .Proyectos{
-    padding-left: 25px;
-    height: 40%;
-    width: auto;
-    margin-left: 15px;
-    
-  }
-
-  footer{
-    width: 100%;
-    justify-items: left;
-    margin-left: 10px;
-    font-size: 5px;
-  }
-}
-  
-figure {
-  border: thin #c0c0c0 solid;
-  padding: 5px;
-  max-width: 120%;
-  margin: auto;
-}
-
-
-figcaption {
-  background-color: rgb(30, 115, 190);
-  color: #fff;
-  font: italic smaller sans-serif;
-  padding: 3px;
-  text-align: center;
-}
-
-@media (max-width: 500px){
-  .AcercaDe {
-    width: 22em;
-  }
-
-  .fotoPerfil{
-    position: relative;
-    top:75px;
-      
-  }
-
-  .box1 .inner{
-    margin-left: 0;
-    width: 100%;
-    
-  }
-
-
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 350px;
+        padding-top: 4rem;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        top: 90%; /* Ajuste para móviles */
+    }
+    .hero-content {
+        margin-top: 3rem !important; /* Más ajuste para el espacio */
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    #acerca-de p {
+        font-size: 0.9rem;
+    }
+    .skill-card {
+        width: 100%; /* Una tarjeta por fila en móviles */
+        max-width: 250px; /* Para que no se estiren demasiado */
+    }
+    .skill-cards-wrapper {
+        gap: 1rem;
+    }
+    .project-card .card-body {
+        padding: 1rem;
+    }
+    .project-card .card-title {
+        font-size: 1.1rem;
+    }
+    .project-card .card-text {
+        font-size: 0.85rem;
+    }
+    footer {
+        padding: 1.5rem 0;
+    }
+    footer h4 {
+        font-size: 1.2rem;
+    }
+    footer .btn-outline-light {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    .social-links a {
+        font-size: 1.5rem;
+    }
 }

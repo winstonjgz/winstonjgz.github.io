@@ -1,80 +1,121 @@
-*{
+:root {
+    --primary-blue: #0727A7;
+    --dark-blue: #00008B;
+    --accent-color: aquamarine;
+    --text-color-light: mintcream;
+    --text-color-grey: rgb(215, 215, 241);
+    --button-bg-blue: rgb(6, 48, 233);
+    --footer-bg: rgb(46, 177, 238);
+    --shadow-light: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    --shadow-thumb: rgba(0, 0, 0, 0.19) 8px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: #0727A7;
+body {
+    background: var(--primary-blue);
     font-family: 'Raleway', sans-serif;
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el footer se quede abajo */
 }
 
-h4{
+h1 {
     text-align: center;
-    color: aquamarine;
-
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 1.8em;
 }
 
-.container{
-    height: 450px;
-    width: 450px;
-    background: darkblue;
-    position: absolute;
-    top: 10%;
-    left: 40%;
-    transform: translate(-50, -50%);
-    border-radius: 5px;
+.password-generator-section {
+    flex-grow: 1; /* Permite que la sección principal ocupe el espacio disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
-.container .app-name{
+.container {
+    background: var(--dark-blue);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow-light);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.app-name {
+    color: var(--text-color-light);
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.password-box {
     height: 55px;
-    width: 100%;
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    color: mintcream;
-    padding: 20px;
-    font-size: 17px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-
-.container .password-box{
-    height: 50px;
-    width: 100%;
-    position: relative;
-    top: 70px;
-    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     display: flex;
     align-items: center;
-    padding-right: 5px;
-
+    padding-right: 15px;
+    position: relative;
 }
 
-.container .password-box input{
+.password-box input {
     all: unset;
-    height: 50px;
-    width: 85%;
-    border-radius: 5px;
+    flex-grow: 1;
     padding-left: 15px;
     color: white;
+    font-size: 1.2em;
+    cursor: default; /* Indica que no es editable directamente */
 }
 
-.container .password-box #copy-btn{
+.password-box #copy-btn {
+    color: var(--accent-color);
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.password-box #copy-btn:hover {
     color: white;
 }
 
-.container .indicator-box{
+.copied-message {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+.copied-message.show {
+    opacity: 1;
+    top: -40px; /* Move up slightly when shown */
+}
+
+
+.indicator-box {
     height: 6px;
     width: 100%;
     position: relative;
-    top: 80px;
-    z-index: 1;
+    margin-top: 5px;
 }
 
-.container .indicator-box div:nth-child(1){
+.indicator-box .indicator-bg {
     height: 3px;
     width: 100%;
     background: gray;
@@ -82,191 +123,239 @@ h4{
     position: absolute;
 }
 
-.container .indicator-box .indicator{
+.indicator-box .indicator {
     height: 3px;
-    width: 35%;
-    background: red;
+    background: red; /* Default to red */
     position: absolute;
     top: 0;
     border-radius: 30px;
-    transition: all .2s;
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.password-length-box{
-    height: 45px;
-    width: 90%;
-    position: absolute;
-    top: 175px;
-}
-
-.password-length-box input{
-    all:unset;
-    height: 4px;
-    width: 100%;
-    background: white;
-    border-radius: 30px;
-}    
-
-.password-length-box input::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    height: 20px;
-    width: 20px;
-    border-radius: 100%;
-    background: #0727A7;
-    border: 5px solid #0727A7;
-    box-shadow: rgba(0, 0, 0, 0.19) 8px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-
-.password-length-box span{
-    font-weight: 680;
-    color: white;
-    font-size: 14px;
-}
-
-.password-length-box .password-length-value{
-    float: right;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.settings{
-    height: 110px;
-    width: 100%;
-    position: relative;
-    top: 170px;
-}
-
-.settings div{
-    height: 55px;
-    width: 50%;
-    float: left;
-    display: flex;
-    justify-content: normal;
-    align-items: center;
-    color: white;
-    font-weight: 600;
-    font-size: 14px;
-
-}
-
-.settings .lowercase #lowercase .settings .numbers #numbers{
-    position: relative;
-    left: -15px;
-  
-}
-
-.settings .lowercase span, .settings .numbers span{
-    position: relative;
-    left: 2px;
-}
-
-.settings .uppercase #uppercase, .settings .symbols #symbols{
-    position: relative;
-    left: 5px;
-    
-}
-
-.settings .uppercase span,.settings .symbols span{
-    position: relative;
-    left: 10px;
-}
-
-.settings .lowercase #lowercase{
-    pointer-events: none;
-}
-
-.container .generate-btn{
-    all: unset;
-    height: 45px;
-    width: 100%;
-    background: rgb(6, 48, 233);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    font-weight: 600;
-    position: relative;
-    top: 7px;
-    cursor: pointer;
-}
-
-.pass-setting-title{
-    position: relative;
-    font-weight: 600;
-    font-size: 14px;
-    position: relative;
-    top: 160px;
-    color: rgb(215, 215, 241);
-}
-
-.container .indicator-box .indicator#weak{
+.indicator-box .indicator#weak {
     background: red;
     width: 35%;
-
 }
 
-.container .indicator-box .indicator#medium{
-    background: rgb(236, 240, 13);
+.indicator-box .indicator#medium {
+    background: orange;
     width: 70%;
 }
 
-.container .indicator-box .indicator#strong{
+.indicator-box .indicator#strong {
     background: green;
     width: 100%;
 }
 
-footer {
-    
-    font-weight: 300;
-    size: 50px;
-    max-height: 75px;
+.pass-setting-title {
+    color: var(--text-color-grey);
+    font-weight: 600;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.password-length-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.password-length-box input[type="range"] {
+    -webkit-appearance: none;
     width: 100%;
+    height: 4px;
+    background: white;
+    border-radius: 30px;
+    outline: none;
+    flex-grow: 1;
+}
+
+.password-length-box input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background: var(--primary-blue);
+    border: 5px solid var(--primary-blue);
+    box-shadow: var(--shadow-thumb);
+    cursor: grab;
+}
+
+.password-length-box input[type="range"]::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+.password-length-box .pass-length-value {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+    min-width: 20px; /* Evita que el número se mueva mucho */
+    text-align: right;
+}
+
+.settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95em;
+    cursor: pointer;
+}
+
+.setting-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--accent-color);
+    border-radius: 3px;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.setting-item input[type="checkbox"]:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.setting-item input[type="checkbox"]:checked::before {
+    content: '\2713'; /* Checkmark unicode character */
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--dark-blue); /* Color of the checkmark */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.setting-item label {
+    cursor: pointer;
+}
+
+/* Deshabilitar interacción con el checkbox de minúsculas si es el único seleccionado */
+.setting-item:first-child input[type="checkbox"]:disabled + label {
+    color: gray;
+    cursor: not-allowed;
+}
+
+
+.generate-btn {
+    all: unset;
+    height: 50px;
+    width: 100%;
+    background: var(--button-bg-blue);
+    color: white;
     display: flex;
     justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    padding: 15px;
-    background-color: rgb(46, 177, 238);
-    margin-top: 600px;
-  }
-
-
-
-@media(max-width: 1200px){
-    
-    .container{
-        top: 10%;
-        left: 30%;
-    }
-    
+    align-items: center;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease-in-out;
 }
 
-
-@media(max-width: 700px){
-    
-    .container{
-        top: 10%;
-        left: 12.5%;
-    }
-
-    
+.generate-btn:hover {
+    background: #042eaf; /* Slightly darker blue on hover */
 }
 
-#volver1{
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    margin: 20px;
-    width: 100px;
-    background-color: aquamarine;
-    display: flex;
-    justify-content: center;
-    border-radius: 15px;
-    
+    background-color: var(--footer-bg);
+    color: white;
+    text-align: center;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    font-size: 0.9em;
 }
 
-#volver1 a{
+footer h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
+    justify-content: center;
+}
+
+footer a {
+    color: white;
     text-decoration: none;
-    font-weight: bolder;
-    font-size: medium;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease-in-out;
+}
+
+footer a:hover {
+    color: var(--dark-blue);
+}
+
+footer i {
+    font-size: 1.2em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .password-box input {
+        font-size: 1em;
+    }
+
+    .password-length-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .password-length-box input[type="range"] {
+        width: 100%;
+    }
+
+    .settings {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        border-radius: 5px;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    .pass-setting-title,
+    .password-length-box span,
+    .setting-item label,
+    .generate-btn {
+        font-size: 0.9em;
+    }
 }

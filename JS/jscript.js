@@ -1,64 +1,21 @@
-let options = {
-    startAngle: -1.55,
-    size: 150,
-    value: 0.90,
-    fill: {gradient: ['#07E6ED', '#07E6ED']}
-  }
-  $(".circle .bar").circleProgress(options).on('circle-animation-progress',
-  function(event, progress, stepValue){
-    $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
-  });
-  $(".js .bar").circleProgress({
-    value: 0.90
-  });
-  $(".php .bar").circleProgress({
-    value: 0.90
-  });      
-  $(".react .bar").circleProgress({
-    value: 0.70
-  });
-  $(".ingles .bar").circleProgress({
-    value: 0.90
-  });
-  $(".Liderazgo .bar").circleProgress({
-    value: 0.95
-  });
-  $(".Comunicacion .bar").circleProgress({
-    value: 0.95
-  });
-  $(".Empatia .bar").circleProgress({
-    value: 0.90
-  });
-  $(".TrabEquipo .bar").circleProgress({
-    value: 0.99
-  });
-  $(".CapAnyRes .bar").circleProgress({
-    value: 0.99
-  });
-  $(".VBA .bar").circleProgress({
-    value: 0.90
-  });
-  $(".bootstrap .bar").circleProgress({
-    value: 0.85
-  });
-  $(".Java .bar").circleProgress({
-    value: 0.85
-  });
-  $(".Python .bar").circleProgress({
-    value: 0.90
-  });
-  $(".Angular .bar").circleProgress({
-    value: 0.85
-  });
-  $(".GoogleSheets_Scripts .bar").circleProgress({
-    value: 0.85
-  });
-  $(".MySQL .bar").circleProgress({
-    value: 0.90
-  });
-  $(".ResolucionC .bar").circleProgress({
-    value: 0.90
-  });
+// Si tienes scripts adicionales, colócalos aquí.
+// Por ejemplo, animaciones al hacer scroll, validaciones de formularios, etc.
 
-  /* Codigo habilitado Fuente: Codepen.io "Responsive Circular Progress Bar | coders kamrul" readaptado por Winston J Guzman*/
+// Ejemplo de un script para agregar una clase 'fade-in' cuando una sección es visible
+/*
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 }); // Se activa cuando el 10% del elemento es visible
 
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('fade-start'); // Clase inicial para ocultar
+        observer.observe(section);
+    });
+});
+*/

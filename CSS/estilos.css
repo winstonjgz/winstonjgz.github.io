@@ -225,6 +225,20 @@ h2, h3 {
     text-align: center;
 }
 
+/* --- Círculo de habilidades --- */
+.circle {
+    position: relative;
+    width: 150px; /* Tamaño del círculo */
+    height: 150px; /* Tamaño del círculo */
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Fondo del círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 /* --- Proyectos --- */
 .project-card {
     border: none;
